@@ -74,17 +74,25 @@ namespace _10a
             //Esta função permite a criação de uma string baseada em um padrão.Podemos colocar dentro do 
             //padrão da string de formatação alguns tokens que poderam ser substituídos por variáveis passadas 
             //por parâmetro no comando format.
-            //No exemplo acima, o padrão da string(primeiro parâmetro) contém um token { 0}. 
+            //No exemplo abaixo, o padrão da string(primeiro parâmetro) contém um token { 0}. 
             //Este token indica que este valor deve ser substituido pelo segundo parâmetro passado para a 
             //função(neste caso a palavra “parâmetro”), exemplo:
             string teste;
             teste = String.Format("Formatação com {0} parâmetro. Agora são {1}. Valor numérico: {2}", 1, DateTime.Now, 15.5);
             Console.WriteLine(teste);
+            Console.WriteLine();
 
-
-//            No exemplo acima, temos o padrão da string com mais de um token, com números de 0 à 2.A função também recebe 3 parâmetros adicionais que correspondem aos valores que serão substituídos na string.Além de informarmos os tokens, podemos informar regras de formatação que serão utilizadas de acordo com o tipo de dado passado por parâmetro, conforme o exemplo,
-
-//sTeste = String.Format("Custom Format: {0:d/M/yyy HH:mm:ss}", dtHoje); sTeste = String.Format("Formatação do número inteiro: {0:D}.", iNumero); sTeste = String.Format("Formatação do número inteiro: {0:D4}.", iNumero);
+            //No exemplo acima, temos o padrão da string com mais de um token, com números de 0 à 2.
+            //A função também recebe 3 parâmetros adicionais que correspondem aos valores que serão substituídos 
+            //na string. Além de informarmos os tokens, podemos informar regras de formatação que serão utilizadas 
+            //de acordo com o tipo de dado passado por parâmetro, conforme o exemplo,
+            string Teste = String.Format("Custom Format: {0:d/M/yyy HH:mm:ss}", DateTime.Now) ;
+            Console.WriteLine(teste);
+            int iNumero = 1024;
+            string sTeste = String.Format("Formatação do número inteiro: {0:D}.", iNumero);
+            Console.WriteLine(sTeste);
+            sTeste = String.Format("Formatação do número inteiro: {0:D4}.", iNumero);
+            Console.WriteLine(sTeste);
         }
     }
 }
