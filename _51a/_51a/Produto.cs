@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _42a
+namespace _51a
 {
     class Produto
     {
@@ -18,19 +18,23 @@ namespace _42a
             this.Qtde = qtde;
         }
 
-        public double ValorTotalEmEstoque() {
+        public double ValorTotalEmEstoque()
+        {
             return this.Qtde * this.Preco;
         }
 
-        public void AdicionarProdutos(int quantity) {
+        public void AdicionarProdutos(int quantity)
+        {
             this.Qtde += quantity;
         }
 
-        public void RemoverProdutos(int quantity) {
+        public void RemoverProdutos(int quantity)
+        {
             this.Qtde -= quantity;
         }
 
-        public void ImprimeDados() {
+        public void ImprimeDados()
+        {
             Console.WriteLine("Dados do produto: {0}, $ {1:F2}, {2} unidades, Total: $ {3:F2}", this.Nome, this.Preco, this.Qtde, this.ValorTotalEmEstoque());
         }
 

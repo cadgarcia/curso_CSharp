@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace _42a
+namespace _51a
 {
     class Program
     {
@@ -25,7 +25,7 @@ namespace _42a
             p.ImprimeDados();
             //Console.WriteLine(p.ToString()) ;
             Console.WriteLine();
-           
+
 
             Console.Write("Digite o número de produtos a serem adicionados ao estoque: ");
             p.Qtde += int.Parse(Console.ReadLine());
