@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _51a
+namespace _52a
 {
     class Produto
     {
@@ -11,7 +11,17 @@ namespace _51a
         public int Qtde;
         StringBuilder sb = new StringBuilder();
 
+        public Produto()
+        {
 
+        }
+
+        public Produto(string nome, double preco)
+        {
+            this.Nome = nome;
+            this.Preco = preco;
+            this.Qtde = 0;          //desnecessário, pois valores numéricos iniciam com 0
+        }
 
         public Produto(string nome, double preco, int qtde)
         {
@@ -39,18 +49,6 @@ namespace _51a
         {
             Console.WriteLine("Dados do produto: {0}, $ {1:F2}, {2} unidades, Total: $ {3:F2}", this.Nome, this.Preco, this.Qtde, this.ValorTotalEmEstoque());
         }
-
-        //public override string ToString()
-        //{
-        //    sb.Append("Dados do produto: ");
-        //    sb.Append(this.Nome + ", ");
-        //    sb.Append("$ " + this.Preco.ToString("F2") + ", ");
-        //    sb.Append(this.Qtde + " unidades, ");
-        //    sb.Append("Total: $$ " + this.ValorTotalEmEstoque().ToString("F2"));
-        //    Console.WriteLine();
-
-        //    return sb.ToString();
-        //}
 
     }
 }
